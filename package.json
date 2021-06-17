@@ -6,6 +6,11 @@
   "scripts": {
     "build": "rm -rf build && prettier --write source/ && tsc"
   },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tekila12/E-tech.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
