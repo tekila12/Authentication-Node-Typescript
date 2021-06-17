@@ -6,7 +6,10 @@ import userRoutes from './routes/user';
 import mongoose from 'mongoose';
 const NAMESPACE = 'Server';
 const router = express();
+import carsRouter from './routes/cars';
 
+
+router.use('./cars',carsRouter )
 mongoose
     .connect(config.mongo.url, config.mongo.options)
     .then((result) => {
@@ -57,6 +60,9 @@ router.use((req, res, next) => {
         message: error.message
     });
 });
+
+
+
 
 const httpServer = http.createServer(router);
 
